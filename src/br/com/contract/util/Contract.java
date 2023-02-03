@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import br.com.contract.services.ServiceException;
+
 public class Contract {
 	
 	private Integer number;
@@ -17,6 +19,9 @@ public class Contract {
 		this.number = number;
 		this.date = date;
 		this.totalValue = totalValue;
+		if(number == null || date == null || totalValue == null) {
+			throw new ServiceException("Os valores de Definição de COntrato não pode ser Nulo.");
+		}
 	}
 
 	public Integer getnumber() {

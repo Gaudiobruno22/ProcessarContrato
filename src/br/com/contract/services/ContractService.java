@@ -47,6 +47,14 @@ public class ContractService implements OnlinePaymentService{
 			double valorLiquido = cota  + interest + juros;
 			
 			contracts.addInstallment(new Installment(dataInicial, valorLiquido));
+			
+			/*if (contracts.getnumber() == 0){
+				throw new ServiceException("O Número do Contrato não pode ser Zero.");
+			}
+			
+			if(contracts.getTotalValue() <= 0) {
+				throw new ServiceException("O valor do Contrato não pode Ser Zero.");
+			}*/
 		}			 
 	}	
 }
