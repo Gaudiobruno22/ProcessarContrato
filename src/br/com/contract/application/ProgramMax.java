@@ -31,7 +31,7 @@ public class ProgramMax {
 				list.add(new Product(registrosLinha[0], Double.parseDouble(registrosLinha[1])));
 				linha = br.readLine();
 			}
-			Product a = CalculationService.max(list);
+			Product a =  CalculationService.max(list);
 			System.out.println("Most Expensive: ");
 			System.out.println(a);
 			
