@@ -46,6 +46,7 @@ public class Product implements Comparable <Product>{
 		return price.compareTo(other.getPrice());
 	}
 
+	//HashCode e Equals - Utilizando Conceito de Set.
 	@Override
 	public int hashCode() {
 		return Objects.hash(name, price);
